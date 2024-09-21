@@ -1,7 +1,7 @@
 GET http://localhost:3000
 
 ###
-GET http://localhost:3000/person 
+GET http://localhost:3000/hello
 
 ###
 GET https://cse341-zjq5.onrender.com/person
