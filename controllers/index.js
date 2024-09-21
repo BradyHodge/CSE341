@@ -3,7 +3,7 @@ const getHelloWorld = (req, res) => {
 };
 
 const getPerson = (req, res) => {
-    res.json('John Doe');
+    res.json('Bailee Hodge');
 }
 
 module.exports = { getHelloWorld , getPerson };
