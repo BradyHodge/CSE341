@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 const bodyParser = require('body-parser');
+const { connectDB } = require('./db/connect');
 
 const professionalRoutes = require('./routes/professional');
 const contactsRoutes  = require('./routes/contacts');
@@ -15,6 +16,8 @@ app.use((req, res, next) => {
 app.use('/professional', professionalRoutes);
 app.use('/contacts', contactsRoutes);
 
-app.listen(8080, function() {
-    console.log('Server is running on port 8080');
+connectDB(() => {
+    app.listen(8080, function() {
+        console.log('Server is running on port 8080');
+    });
 });
