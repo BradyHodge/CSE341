@@ -1,20 +1,24 @@
-require('dotenv').config();
+const env = require('dotenv');
+env.config();
 const { MongoClient } = require('mongodb');
 
+const uri = process.env.MONGODB_URI;
 let _db;
 
-async function main() {
-  const client = new MongoClient(process.env.MONGODB_URI);
-
-  try {
-    await client.connect();
-    _db = client.db('CSE341'); 
-    console.log("Connected to MongoDB successfully!");
-  } catch (error) {
-    console.error('Connection error:', error);
+const initDb = async (callback) => {
+  if (_db) {
+    console.log('Database is already initialized!');
+    return callback(null, _db);
   }
-}
-main().catch(console.error);
+  try {
+    const client = await MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+    _db = client.db();
+    console.log('Database initialized');
+    callback(null, _db);
+  } catch (err) {
+    callback(err);
+  }
+};
 
 const getDb = () => {
   if (!_db) {
@@ -23,4 +27,7 @@ const getDb = () => {
   return _db;
 };
 
-module.exports = { getDb }; 
+module.exports = {
+  initDb,
+  getDb
+};
