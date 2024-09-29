@@ -1,7 +1,0 @@
-GET http://localhost:8080/contacts/66f8d3495dee7526fa826eee
-###
-GET http://localhost:8080/contacts
-###
-GET http://localhost:8080/testdb
-###
-GET http://localhost:8080/professional
