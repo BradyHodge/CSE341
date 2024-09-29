@@ -1,0 +1,23 @@
+[
+    {
+        "firstName": "Brady",
+        "lastName": "Hodge",
+        "email": "contact@bradyhodge.com",
+        "favoriteColor": "Purple",
+        "birthday": "09/06/024"
+    },
+    {
+        "firstName": "John",
+        "lastName": "Anderson",
+        "email": "john@anderson.sus",
+        "favoriteColor": "Blue",
+        "birthday": "01/01/01"
+    },
+    {
+        "firstName": "Cameron",
+        "lastName": "Decker",
+        "email": "coolguy@gmail.com",
+        "favoriteColor": "Green",
+        "birthday": "12/25/00"
+    }
+]

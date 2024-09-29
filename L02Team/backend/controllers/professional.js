@@ -28,7 +28,6 @@ const data = {
     contactText:
         "Email contact@brayhodge.com for more information or to get in touch with Brady.",
 };
-  exports.getData = (req, res, next) => {
-    // await mongodb call
+exports.getData = (req, res, next) => {
     res.status(200).json(data);
-  };
+};

@@ -7,8 +7,8 @@ const professionalRoutes = require('./routes/professional');
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  next();
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
 });
 
 app.use('/professional', professionalRoutes);
