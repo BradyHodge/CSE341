@@ -21,6 +21,14 @@ const getSingle = async (req, res, next) => {
 };
 
 const createContact = async (contact) => {
+  const requiredFields = ['firstName', 'lastName', 'email', 'favoriteColor', 'birthday'];
+  
+  for (const field of requiredFields) {
+    if (!contact[field] || contact[field].trim() === '') {
+      throw new Error(`${field} is required and cannot be empty`);
+    }
+  }
+
   try {
     const db = await getDB();
     const result = await db.collection('contacts').insertOne(contact);
