@@ -4,7 +4,7 @@ GET http://localhost:8080/testdb
 GET http://localhost:8080/contacts
 
 ### get contact by id
-GET http://localhost:8080/contacts/66f8d3495dee7526fa826eee
+GET http://localhost:8080/contacts/67017f543faa9121d73a9796
 
 ### create contact
 POST http://localhost:8080/contacts 
@@ -19,7 +19,7 @@ content-type: application/json
 }
 
 ### update contact
-PUT http://localhost:8080/contacts/670177f3291f487bc075ea0e 
+PUT http://localhost:8080/contacts/67017f543faa9121d73a9796 
 content-type: application/json
 
 {
@@ -31,7 +31,7 @@ content-type: application/json
 }
 
 ### delete contact
-DELETE http://localhost:8080/contacts/670179ed98f4ef8db9e4efb3
+DELETE http://localhost:8080/contacts/67017f543faa9121d73a9796
 
 ### prod
 GET http://cse341-1s59.onrender.com/testdb
@@ -40,7 +40,7 @@ GET http://cse341-1s59.onrender.com/testdb
 GET http://cse341-1s59.onrender.com/contacts
 
 ### get contact by id
-GET http://cse341-1s59.onrender.com/contacts/67017ced1ad2a1d92cddacd7
+GET http://cse341-1s59.onrender.com/contacts/67017f86b5a5c3771f031408
 
 ### create contact
 POST http://cse341-1s59.onrender.com/contacts 
@@ -55,16 +55,16 @@ content-type: application/json
 }
 
 ### update contact
-PUT http://cse341-1s59.onrender.com/contacts/67017ced1ad2a1d92cddacd7 
+PUT http://cse341-1s59.onrender.com/contacts/67017f86b5a5c3771f031408 
 content-type: application/json
 
 {
     "firstName":"Nate",
     "lastName":"Smith",
-    "email":"Nmith@test.com",
+    "email":"Nmith@test.net",
     "favoriteColor":"Blue",
-    "birthday":"12/12/2000"
+    "birthday":"12/12/2001"
 }
 
 ### delete contact
-DELETE http://cse341-1s59.onrender.com/contacts/67017ced1ad2a1d92cddacd7
+DELETE http://cse341-1s59.onrender.com/contacts/67017f86b5a5c3771f031408
