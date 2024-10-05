@@ -1,12 +1,15 @@
-GET http://localhost:8080/contacts/66f8d3495dee7526fa826eee
-###
-GET http://localhost:8080/contacts
-###
 GET http://localhost:8080/testdb
-###
-POST http://localhost:8080/contacts
 
+### get all contacts
+GET http://localhost:8080/contacts
+
+### get contact by id
+GET http://localhost:8080/contacts/66f8d3495dee7526fa826eee
+
+### create contact
+POST http://localhost:8080/contacts 
 content-type: application/json
+
 {
     "firstName": "Nate",
     "lastName": "Smith",
@@ -14,9 +17,9 @@ content-type: application/json
     "favoriteColor": "Green",
     "birthday": "06/10/2000"
 }
-###
-PUT http://localhost:8080/contacts/6220bcb39cd507e920c75a0b
 
+### update contact
+PUT http://localhost:8080/contacts/670177f3291f487bc075ea0e 
 content-type: application/json
 
 {
@@ -24,35 +27,44 @@ content-type: application/json
     "lastName":"Smith",
     "email":"Nmith@test.net",
     "favoriteColor":"Blue",
-    "birthday":"06/10/2001"
-    }
-###
-DELETE http://localhost:8080/contacts/6220e34083149913680f9a64
-###
-GET https://l02personal.onrender.com/contacts/66f8d3495dee7526fa826eee
-###
-GET https://l02personal.onrender.com/contacts
-###
-POST https://l02personal.onrender.com/contacts
+    "birthday":"12/12/2001"
+}
 
+### delete contact
+DELETE http://localhost:8080/contacts/6701794342f5455a5f29f5c8
+
+### prod
+GET http://l03personal.onrender.com/testdb
+
+## get all contacts
+GET http://l03personal.onrender.com/contacts
+
+### get contact by id
+GET http://l03personal.onrender.com/contacts/67016e1f843e0de4c0ebc338
+
+### create contact
+POST http://l03personal.onrender.com/contacts 
 content-type: application/json
+
+{
+    "firstName": "Nate",
+    "lastName": "Smith",
+    "email": "Nmith@test.com",
+    "favoriteColor": "Green",
+    "birthday": "06/10/2000"
+}
+
+### update contact
+PUT http://l03personal.onrender.com/contacts/67016e1f843e0de4c0ebc338 
+content-type: application/json
+
 {
     "firstName":"Nate",
     "lastName":"Smith",
     "email":"Nmith@test.com",
-    "favoriteColor":"Green",
-    "birthday":"06/10/2000"
-}
-###
-PUT https://l02personal.onrender.com/contacts/6220bcb39cd507e920c75a0b
-
-content-type: application/json
-{
-    "firstName":"Nate",
-    "lastName":"Smith",
-    "email":"Nmith@test.net",
     "favoriteColor":"Blue",
-    "birthday":"06/10/2001"
-    }
-###
-DELETE https://l02personal.onrender.com/contacts/6220e34083149913680f9a64
+    "birthday":"12/12/2000"
+}
+
+### delete contact
+DELETE http://l03personal.onrender.com/contacts/67016e1f843e0de4c0ebc338
