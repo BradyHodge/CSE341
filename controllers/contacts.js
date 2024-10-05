@@ -19,5 +19,11 @@ const getSingle = async (req, res, next) => {
     res.status(200).json(lists[0]);
   });
 };
+const createContact = async (contact) => {
+  const db = await getDB();
+  const result = await db.collection('contacts').insertOne(contact);
+  return result.insertedId;
+};
 
-module.exports = { getAll, getSingle };
+
+module.exports = { getAll, getSingle, createContact };

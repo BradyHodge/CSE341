@@ -4,6 +4,55 @@ GET http://localhost:8080/contacts
 ###
 GET http://localhost:8080/testdb
 ###
+POST http://localhost:8080/contacts
+
+content-type: application/json
+{
+    "firstName": "Nate",
+    "lastName": "Smith",
+    "email": "Nmith@test.com",
+    "favoriteColor": "Green",
+    "birthday": "06/10/2000"
+}
+###
+PUT http://localhost:8080/contacts/6220bcb39cd507e920c75a0b
+
+content-type: application/json
+
+{
+    "firstName":"Nate",
+    "lastName":"Smith",
+    "email":"Nmith@test.net",
+    "favoriteColor":"Blue",
+    "birthday":"06/10/2001"
+    }
+###
+DELETE http://localhost:8080/contacts/6220e34083149913680f9a64
+###
 GET https://l02personal.onrender.com/contacts/66f8d3495dee7526fa826eee
 ###
 GET https://l02personal.onrender.com/contacts
+###
+POST https://l02personal.onrender.com/contacts
+
+content-type: application/json
+{
+    "firstName":"Nate",
+    "lastName":"Smith",
+    "email":"Nmith@test.com",
+    "favoriteColor":"Green",
+    "birthday":"06/10/2000"
+}
+###
+PUT https://l02personal.onrender.com/contacts/6220bcb39cd507e920c75a0b
+
+content-type: application/json
+{
+    "firstName":"Nate",
+    "lastName":"Smith",
+    "email":"Nmith@test.net",
+    "favoriteColor":"Blue",
+    "birthday":"06/10/2001"
+    }
+###
+DELETE https://l02personal.onrender.com/contacts/6220e34083149913680f9a64
