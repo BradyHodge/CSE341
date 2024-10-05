@@ -31,19 +31,19 @@ content-type: application/json
 }
 
 ### delete contact
-DELETE http://localhost:8080/contacts/6701794342f5455a5f29f5c8
+DELETE http://localhost:8080/contacts/670179ed98f4ef8db9e4efb3
 
 ### prod
-GET http://l03personal.onrender.com/testdb
+GET http://cse341-1s59.onrender.com/testdb
 
-## get all contacts
-GET http://l03personal.onrender.com/contacts
+### get all contacts
+GET http://cse341-1s59.onrender.com/contacts
 
 ### get contact by id
-GET http://l03personal.onrender.com/contacts/67016e1f843e0de4c0ebc338
+GET http://cse341-1s59.onrender.com/contacts/67017ced1ad2a1d92cddacd7
 
 ### create contact
-POST http://l03personal.onrender.com/contacts 
+POST http://cse341-1s59.onrender.com/contacts 
 content-type: application/json
 
 {
@@ -55,7 +55,7 @@ content-type: application/json
 }
 
 ### update contact
-PUT http://l03personal.onrender.com/contacts/67016e1f843e0de4c0ebc338 
+PUT http://cse341-1s59.onrender.com/contacts/67017ced1ad2a1d92cddacd7 
 content-type: application/json
 
 {
@@ -67,4 +67,4 @@ content-type: application/json
 }
 
 ### delete contact
-DELETE http://l03personal.onrender.com/contacts/67016e1f843e0de4c0ebc338
+DELETE http://cse341-1s59.onrender.com/contacts/67017ced1ad2a1d92cddacd7
