@@ -19,9 +19,16 @@ app.use((req, res, next) => {
 app.use(cors());
 app.use(bodyParser.json());
 
+app.use((req, res, next) => {
+  res.setHeader('Content-Type', 'application/json');
+  next();
+});
+
 app.use('/api-docs', swaggerUi.serve);
 app.get('/api-docs', swaggerUi.setup(swaggerDocument));
+
 app.get('/test-html', (req, res) => {
+  res.setHeader('Content-Type', 'text/html');
   res.sendFile(path.join(__dirname, 'test.html'));
 });
 
@@ -32,7 +39,6 @@ app.use((req, res, next) => {
     'Origin, X-Requested-With, Content-Type, Accept, Z-Key'
   );
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  
   next();
 });
 
@@ -43,7 +49,7 @@ app.get('/testdb', async (req, res) => {
   try {
     const db = await getDB();
     console.log('Successfully connected to the database');
-    res.send('Database connection successful');
+    res.json({ message: 'Database connection successful' });
   } catch (error) {
     console.error('Error connecting to the database:', error);
     res.status(500).json({ error: 'Failed to connect to the database' });
