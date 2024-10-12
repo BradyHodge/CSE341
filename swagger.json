@@ -8,12 +8,15 @@
   "host": "cse341-1s59.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api-docs": {
       "get": {
         "description": "",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "default": {
             "description": ""
@@ -24,6 +27,9 @@
     "/test-html": {
       "get": {
         "description": "",
+        "produces": [
+          "text/html"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -34,6 +40,9 @@
     "/testdb": {
       "get": {
         "description": "",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -47,6 +56,9 @@
     "/professional/": {
       "get": {
         "description": "",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -68,6 +80,9 @@
       },
       "post": {
         "description": "",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "201": {
             "description": "Created"
@@ -100,6 +115,9 @@
       },
       "put": {
         "description": "",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -131,6 +149,9 @@
       },
       "delete": {
         "description": "",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
