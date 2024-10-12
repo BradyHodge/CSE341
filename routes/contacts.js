@@ -1,6 +1,7 @@
 const express = require('express');
 const { getAll, getSingle, createContact, updateContact, deleteContact } = require('../controllers/contacts');
 
+
 const router = express.Router();
 
 router.get('/', getAll);
@@ -20,5 +21,7 @@ router.post('/', async (req, res) => {
 router.put('/:id', updateContact);
 
 router.delete('/:id', deleteContact);
+
+
 
 module.exports = router;
