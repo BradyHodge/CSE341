@@ -66,33 +66,48 @@
         }
       }
     },
-    "/contacts/": {
-      "get": {
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "post": {
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
+    
+  "/contacts": {
+    "get": {
+      "description": "",
+      "produces": [
+        "application/json"
+      ],
+      "responses": {
+        "200": {
+          "description": "OK"
         }
       }
     },
+    "post": {
+      "description": "",
+      "consumes": [
+        "application/json"
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "parameters": [
+        {
+          "in": "body",
+          "name": "body",
+          "description": "Contact object that needs to be added",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/Contact"
+          }
+        }
+      ],
+      "responses": {
+        "201": {
+          "description": "Created"
+        },
+        "500": {
+          "description": "Internal Server Error"
+        }
+      }
+    }
+  },
     "/contacts/{id}": {
       "get": {
         "description": "",
