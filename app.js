@@ -24,10 +24,12 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/api-docs', (req, res, next) => {
+app.use('/api-docs', swaggerUi.serve);
+
+app.get('/api-docs', (req, res, next) => {
   res.setHeader('Content-Type', 'text/html');
-  next();
-}, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+  swaggerUi.setup(swaggerDocument)(req, res, next);
+});
 
 
 app.get('/test-html', (req, res) => {
