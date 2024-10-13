@@ -66,48 +66,45 @@
         }
       }
     },
-    
-  "/contacts": {
-    "get": {
-      "description": "",
-      "produces": [
-        "application/json"
-      ],
-      "responses": {
-        "200": {
-          "description": "OK"
-        }
-      }
-    },
-    "post": {
-      "description": "",
-      "consumes": [
-        "application/json"
-      ],
-      "produces": [
-        "application/json"
-      ],
-      "parameters": [
-        {
-          "in": "body",
-          "name": "body",
-          "description": "Contact object that needs to be added",
-          "required": true,
-          "schema": {
-            "$ref": "#/definitions/Contact"
+    "/contacts/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
-      ],
-      "responses": {
-        "201": {
-          "description": "Created"
-        },
-        "500": {
-          "description": "Internal Server Error"
-        }
+      },
+      "post": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "_id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ]
       }
-    }
-  },
+    },
     "/contacts/{id}": {
       "get": {
         "description": "",
