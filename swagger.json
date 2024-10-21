@@ -5,12 +5,25 @@
     "description": "Users API",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "cse341-1s59.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "produces": [
+          "text/html"
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/user/": {
       "get": {
         "description": "",
