@@ -88,22 +88,18 @@ const validateUserData = (req, res, next) => {
   const { username, password, location } = req.body;
   const errors = [];
 
-  // Check if required fields exist
   if (!username) errors.push('Username is required');
   if (!password) errors.push('Password is required');
   if (!location) errors.push('Location is required');
 
-  // Validate username
   if (username && (typeof username !== 'string' || username.length < 3 || username.length > 30)) {
       errors.push('Username must be between 3 and 30 characters');
   }
 
-  // Validate password
   if (password && (typeof password !== 'string' || password.length < 6)) {
       errors.push('Password must be at least 6 characters long');
   }
 
-  // Validate location
   if (location && (typeof location !== 'string' || location.length < 2)) {
       errors.push('Location must be a valid string with at least 2 characters');
   }
