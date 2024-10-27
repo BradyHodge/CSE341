@@ -92,7 +92,7 @@ const validateUserData = (req, res, next) => {
   if (!password) errors.push('Password is required');
   if (!location) errors.push('Location is required');
 
-  if (userName && (typeof username !== 'string' || userName.length < 3 || userName.length > 30)) {
+  if (userName && (typeof userName !== 'string' || userName.length < 3 || userName.length > 30)) {
       errors.push('Username must be between 3 and 30 characters');
   }
 
