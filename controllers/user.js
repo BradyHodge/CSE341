@@ -85,14 +85,14 @@ const deleteUser = async (req, res) => {
   }
 };
 const validateUserData = (req, res, next) => {
-  const { username, password, location } = req.body;
+  const { userName, password, location } = req.body;
   const errors = [];
 
-  if (!username) errors.push('Username is required');
+  if (!userName) errors.push('Username is required');
   if (!password) errors.push('Password is required');
   if (!location) errors.push('Location is required');
 
-  if (username && (typeof username !== 'string' || username.length < 3 || username.length > 30)) {
+  if (userName && (typeof username !== 'string' || userName.length < 3 || userName.length > 30)) {
       errors.push('Username must be between 3 and 30 characters');
   }
 
