@@ -9,10 +9,10 @@ router.get('/:id', getSingle);
 
 router.post('/', validateUserData, async (req, res) => {
     try {
-        const newUser = await createUser(req.body);
+        const newUserId = await createUser(req.body);
         return res.status(201).json({ 
             status: 'success',
-            data: { id: newUser }
+            data: { id: newUserId }
         });
     } catch (err) {
         console.error('Error creating user:', err);
@@ -40,7 +40,7 @@ router.put('/:id', validateUserData, async (req, res) => {
         }
         return res.status(200).json({
             status: 'success',
-            data: { user: updatedUser }
+            message: 'User updated successfully'
         });
     } catch (err) {
         console.error('Error updating user:', err);
